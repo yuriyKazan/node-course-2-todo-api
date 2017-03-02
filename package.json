@@ -4,6 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
+    "start": "node server/server.js",
     "test": "D:\\Node.js_DeveloperCourse_2\\node.exe D:\\Node.js_DeveloperCourse_2\\node-todo-api\\node_modules\\mocha server/**/*.test.js",
     "test-watch": "nodemon --exec npm test"
   },
