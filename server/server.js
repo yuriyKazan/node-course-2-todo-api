@@ -73,11 +73,11 @@ app.patch('/todos/:id', (req, res) => {
         return res.status(404).send();
     }    
 
-    if (_.isBoolean(body.complited) && body.complited) {
-        body.complitedAt = new Date().getTime();
+    if (_.isBoolean(body.completed) && body.completed) {
+        body.completedAt = new Date().getTime();
     } else {
-        body.complited = false;
-        body.complitedAt = null;
+        body.completed = false;
+        body.completedAt = null;
     }
 
     Todo.findByIdAndUpdate(req.params.id, {$set: body}, {new: true}).then((todo) => {
